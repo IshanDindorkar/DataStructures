@@ -1,12 +1,17 @@
-// Code showing first implementation of a Linked List (insertion and deletion)
-// Created by Ishan D
-
+/**
+ * 
+ */
 package com.pract.linkedlist;
 
+/**
+ * @author IshanD
+ *
+ */
+public class ReverseList {
 
-
-public class LinkedListImplementation {
-
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		ListNode head = new ListNode();
 		ListNode ListNode1 = ListNode.create(15);
@@ -20,8 +25,10 @@ public class LinkedListImplementation {
 		ListNode ListNode5 = ListNode.create(55);
 		head = ListNode.insert(head, ListNode5, 5);
 		ListNode.print(head);
-		ListNode.delete(head, ListNode3);
-		System.out.println("\n After delete ...\n");
+		head = ListNode.reverseList(head);
+		System.out.println("\n After reverse ... \n");
 		ListNode.print(head);
+
 	}
+
 }
