@@ -43,6 +43,26 @@ class Node{
 		return head;
 	}
 	
+	public static int delete(Node head, Node node){
+		
+		if(head == null)
+			return -1; // linked list is empty
+		else{
+			
+			Node temp = new Node();
+			Node prev = new Node();
+			temp = head;
+			while(temp.getNext()!=null){
+				prev = temp;
+				temp = temp.getNext();
+				if(temp.getData() == node.getData()){
+					prev.setNext(temp.getNext());
+				}	
+			}
+			return 0;
+		}
+	}
+	
 	public static void print(Node head){
 		
 		Node temp = new Node();
@@ -69,6 +89,9 @@ public class InsertList {
 		head = Node.insert(head, node4, 4);
 		Node node5 = Node.create(55);
 		head = Node.insert(head, node5, 5);
+		Node.print(head);
+		Node.delete(head, node3);
+		System.out.println("\n After delete ...\n");
 		Node.print(head);
 	}
 
