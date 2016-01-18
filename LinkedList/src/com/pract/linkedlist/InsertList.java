@@ -1,4 +1,4 @@
-// Code showing first implementation of a Linked List
+// Code showing first implementation of a Linked List 
 
 package com.pract.linkedlist;
 
