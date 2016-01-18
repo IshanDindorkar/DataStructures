@@ -1,3 +1,5 @@
+// Code showing first implementation of a Linked List
+
 package com.pract.linkedlist;
 
 class Node{
