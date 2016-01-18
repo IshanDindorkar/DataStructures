@@ -75,7 +75,7 @@ class Node{
 	
 }
 
-public class InsertList {
+public class LinkedListImplementation {
 
 	public static void main(String[] args) {
 		Node head = new Node();
