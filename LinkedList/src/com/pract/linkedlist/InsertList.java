@@ -1,4 +1,5 @@
 // Code showing first implementation of a Linked List
+// Created by Ishan D
 
 package com.pract.linkedlist;
 
