@@ -52,14 +52,31 @@ public class DoubleLinkedListImpl {
 		
 	}
 	
+	public static void reversePrint(DoubleLinkedListNode head){
+		
+		DoubleLinkedListNode temp = head;
+		if(temp == null)
+			return;
+		reversePrint(temp.getNext());
+		System.out.print(temp.getData()+" ");
+	}
+	
 	public static void print(DoubleLinkedListNode head){
 		
-		DoubleLinkedListNode temp = new DoubleLinkedListNode();
-		temp = head.getNext();
-		while(temp!=null){
-			System.out.print(temp.getData()+" ");
+		DoubleLinkedListNode temp = head;
+		if(temp == null)
+			return;
+		System.out.print(temp.getData()+" ");
+		print(temp.getNext());
+		
+		/*temp = head;
+		while(temp.getNext()!=null){
+			
 			temp = temp.getNext();
-		}
+			System.out.print(temp.getData()+" ");
+			
+			
+		}*/
 		
 	}
 	
@@ -85,6 +102,8 @@ public class DoubleLinkedListImpl {
 		System.out.println("\n After deleting ....");
 		DoubleLinkedListImpl.deleteNode(head, 10);
 		DoubleLinkedListImpl.print(head);
+		System.out.println("\n Reverse print ....");
+		DoubleLinkedListImpl.reversePrint(head);
 	}
 
 }
