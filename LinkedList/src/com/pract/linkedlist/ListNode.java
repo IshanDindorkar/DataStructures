@@ -88,6 +88,22 @@ public class ListNode{
 		return head;
 	}
 	
+	public static ListNode reverseRec(ListNode head){
+		
+		ListNode temp = head;
+		
+		if(temp.getNext()==null){
+			head = temp;
+		}
+		else{
+			reverseRec(temp.getNext());
+			ListNode temp1 = temp.getNext();
+			temp1.setNext(temp);
+			temp.setNext(null);
+		}
+		return head;
+	}
+	
 	public static void print(ListNode head){
 		
 		ListNode temp = new ListNode();

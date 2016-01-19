@@ -25,7 +25,7 @@ public class ReverseList {
 		ListNode ListNode5 = ListNode.create(55);
 		head = ListNode.insert(head, ListNode5, 5);
 		ListNode.print(head);
-		head = ListNode.reverseList(head);
+		head = ListNode.reverseRec(head);
 		System.out.println("\n After reverse ... \n");
 		ListNode.print(head);
 
